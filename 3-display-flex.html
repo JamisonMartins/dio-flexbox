@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex flow</title>
+
+    <style>
+        body {
+            background-color: #202020;
+            text-transform: uppercase;
+        }
+        body h1 {
+            margin-top:50px;
+            color: pink;
+            text-shadow: 0 0 3px;
+        }
+
+        body h1:first-child {
+            margin-top: 10px;
+        }
+
+        .flex-container{
+            display: flex;
+            border: 1px solid violet;
+            max-width: 500px;
+        }
+
+        .default {
+            flex-flow: row nowrap;
+        }
+
+        .wrap {
+            flex-flow: row wrap;
+        }
+
+        .wrap-reverse {
+            flex-flow: row wrap-reverse;
+        }
+
+        .rr-nowrap {
+            flex-flow: row-reverse nowrap;
+        }
+
+        .rr-wrap {
+            flex-flow: row-reverse wrap;
+        }
+
+        .rr-wrap-reverse{
+            flex-flow: row-reverse wrap-reverse;
+        }
+
+        .item {
+            box-sizing:border-box;
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>default: row nowrap</h1>
+    <div class="flex-container default">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>row-reverse nowrap</h1>
+    <div class="flex-container rr-nowrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>row wrap</h1>
+    <div class="flex-container wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>row-reverse wrap</h1>
+    <div class="flex-container rr-wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>row wrap-reverse</h1>
+    <div class="flex-container wrap-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h1>row-reverse wrap-reverse</h1>
+    <div class="flex-container rr-wrap-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    
+</body>
+</html>
