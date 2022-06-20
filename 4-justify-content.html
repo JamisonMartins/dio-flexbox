@@ -8,13 +8,14 @@
     <style>
         p {
             text-align: center;
+            text-transform: uppercase;
         }
 
         .container{
             max-width: 400px;
             border: 2px solid lightpink;
-            display: flex;
             margin: 10px auto;
+            display: flex;
         }
 
         .item{
@@ -40,7 +41,7 @@
 </head>
 
 <body>
-    <p>flex-start</p>
+    <p>justify-content: flex-start (default)</p>
     <section class="container flex-start">
         <div class="item">item</div>
         <div class="item">item 2</div>
@@ -49,7 +50,7 @@
     
     <br>
     
-    <p>flex-end</p>
+    <p>justify-content: flex-end</p>
     <section class="container flex-end">
         <div class="item">item</div>
         <div class="item">item 2</div>
@@ -58,7 +59,7 @@
 
     <br>
 
-    <p>center</p>
+    <p>justify-content: center</p>
     <section class="container center">
         <div class="item">item</div>
         <div class="item">item 2</div>
