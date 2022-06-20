@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos - justify-content</title>
     <style>
-        p {
+        h2 {
             text-align: center;
             text-transform: uppercase;
+            font-size: medium;
         }
 
         .container{
@@ -45,21 +46,21 @@
 </head>
 
 <body>
-    <p>justify-content: flex-start (default)</p>
+    <h2>justify-content: flex-start (default)</h2>
     <section class="container flex-start">
         <div class="item">item</div>
         <div class="item">item 2</div>
         <div class="item">outro item</div>
     </section>
     
-    <p>justify-content: flex-end</p>
+    <h2>justify-content: flex-end</h2>
     <section class="container flex-end">
         <div class="item">item</div>
         <div class="item">item 2</div>
         <div class="item">outro item</div>
     </section>
 
-    <p>justify-content: center</p>
+    <h2>justify-content: center</h2>
     <section class="container center">
         <div class="item">item</div>
         <div class="item">item 2</div>
@@ -68,7 +69,8 @@
         <div class="item">5</div>
     </section>
 
-    <p>justify-content: space-between </p>
+    <!-- Adiciona espaço entre os itens filhos "empurrando" os das pontas aos ertremos do container -->
+    <h2>justify-content: space-between </h2>
     <section class="container space-between">
         <div class="item">item</div>
         <div class="item">item 2</div>
