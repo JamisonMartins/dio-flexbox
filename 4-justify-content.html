@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos - justify-content</title>
     <style>
+        body {
+            background-color: #202020;
+        }
+
         h2 {
             text-align: center;
             text-transform: uppercase;
@@ -15,7 +19,7 @@
         .container{
             max-width: 400px;
             border: 2px solid lightpink;
-            margin: 10px auto 40px;
+            margin: 10px auto 50px;
             display: flex;
         }
 
@@ -42,39 +46,61 @@
             justify-content: space-between;
         }
 
+        .space-around {
+            justify-content: space-around;    
+        }
+
+        .space-evenly {
+            justify-content: space-evenly;    
+        }
+
     </style>
 </head>
 
 <body>
     <h2>justify-content: flex-start (default)</h2>
     <section class="container flex-start">
-        <div class="item">item</div>
-        <div class="item">item 2</div>
-        <div class="item">outro item</div>
+        <div class="item">01</div>
+        <div class="item"> 02</div>
+        <div class="item">03</div>
     </section>
     
     <h2>justify-content: flex-end</h2>
     <section class="container flex-end">
-        <div class="item">item</div>
-        <div class="item">item 2</div>
-        <div class="item">outro item</div>
+        <div class="item">01</div>
+        <div class="item"> 02</div>
+        <div class="item">03</div>
     </section>
 
     <h2>justify-content: center</h2>
     <section class="container center">
-        <div class="item">item</div>
-        <div class="item">item 2</div>
-        <div class="item">outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
+        <div class="item">01</div>
+        <div class="item"> 02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+        <div class="item">05</div>
     </section>
 
     <!-- Adiciona espaço entre os itens filhos "empurrando" os das pontas aos ertremos do container -->
     <h2>justify-content: space-between </h2>
     <section class="container space-between">
-        <div class="item">item</div>
-        <div class="item">item 2</div>
-        <div class="item">outro item</div>
+        <div class="item">01</div>
+        <div class="item"> 02</div>
+        <div class="item">03</div>
+    </section>
+
+    <h2>justify-content: space-around</h2>
+    <section class="container space-around">
+        <div class="item">01</div>
+        <div class="item"> 02</div>
+        <div class="item">03</div>
+    </section>
+
+    <h2>justify-content: space-evenly</h2>
+    <section class="container space-evenly">
+        <div class="item">01</div>
+        <div class="item"> 02</div>
+        <div class="item">03</div>
     </section>
 
     <a href="index.html" 

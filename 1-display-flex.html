@@ -7,8 +7,30 @@
     <title>Fundamentos - flex direction</title>
     <style>
         body{
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             color:black
+        }
+
+        body a {
+            padding:5px; 
+            background-color: rgb(0, 0, 0); 
+            color: rgb(255, 255, 255); 
+            text-align: center; 
+            position:relative; 
+            top: 10px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size:1.2rem ;
+            display: inline-block;
+            margin: 1px auto 20px;
+        }
+
+
+        /*
+            padding:5px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); text-align: center; text-decoration: none; font-weight: bold; font-size:1.2rem; margin: 10px auto; display: inline-block
+        */
+        body a:hover {
+            color: lightgrey;
         }
 
         .flex-container{
@@ -62,6 +84,10 @@
     </style>
 </head>
 <body>
+    <a href="index.html" 
+    style="">
+        Index
+    </a>
 
     <ul class="flex-container row wrap">
         <li class="flex-item">1</li>
@@ -95,9 +121,5 @@
         <li class="flex-item">5</li>
     </ul>
 
-    <a href="index.html" 
-    style="padding:5px; background-color: yellow; color: black; text-align: center; position:relative; top: 10px; text-decoration: none; font-weight: bold; font-size:1.2rem ;">
-        Index
-    </a>
 </body>
 </html>
