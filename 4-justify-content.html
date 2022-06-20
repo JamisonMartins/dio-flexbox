@@ -10,6 +10,25 @@
             background-color: #202020;
         }
 
+        a {
+            padding:5px; 
+            background-color: blueviolet; 
+            color: lightpink; 
+            text-align: center;  
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size:1.2rem; 
+            display: block; 
+            position:relative; 
+            width: 60px; 
+            margin: 40px auto; 
+            border-radius: 10%;
+        }
+
+        a:hover {
+            color: gold;
+        }
+
         h2 {
             text-align: center;
             text-transform: uppercase;
@@ -58,6 +77,10 @@
 </head>
 
 <body>
+    <a href="index.html">
+        MENU
+    </a>
+
     <h2>justify-content: flex-start (default)</h2>
     <section class="container flex-start">
         <div class="item">01</div>
@@ -102,11 +125,6 @@
         <div class="item"> 02</div>
         <div class="item">03</div>
     </section>
-
-    <a href="index.html" 
-    style="padding:5px; background-color: blueviolet; color: lightpink; text-align: center;  text-decoration: none; font-weight: bold; font-size:1.2rem; display: block; position:relative; width: 60px; margin: 40px auto; border-radius: 10%;">
-        Index
-    </a>
 
 </body>
 </html>

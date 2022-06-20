@@ -8,41 +8,50 @@
     <style>
         body{
             padding-top: 10px;
-            background-color: white;
-            color:black
+            background-color: #202020;
+            color: pink;
         }
 
         body a {
-            padding:5px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); text-align: center; position:relative; top: 10px; text-decoration: none; font-weight: bold; font-size:1.2rem ;
+            padding:5px; 
+            background-color: blueviolet; 
+            color: lightpink; 
+            text-align: center;  text-decoration: none; 
+            font-weight: bold; 
+            font-size:1.2rem ;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 10%;
         }
 
         body a:hover {
-            color: lightgrey;
+            color: gold;
         }
 
         .flex{
             max-width: 300px;
             padding: 10px;
-            border: 2px solid black;
+            border: 2px solid white;
+            border-radius: 10px;
             display: flex;
         }
 
         .item {
-            background-color: aqua;
+            background-color: rgb(255, 0, 217);
             margin: 5px;
+            padding:2px
         }
 
     </style>
 </head>
 <body>
+    <a href="index.html">
+        MENU
+    </a>
     <div class="flex">
         <div class="item">Item 1</div>
         <div class="item">Item 2</div>
         <div class="item">Item 3</div>
     </div>
-
-    <a href="index.html">
-        Index
-    </a>
 </body>
 </html>

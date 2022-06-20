@@ -11,6 +11,27 @@
             background-color: #202020;
             text-transform: uppercase;
         }
+
+        body a {
+            padding:5px; 
+            background-color: blueviolet;  
+            color: lightpink; 
+            text-align: center; 
+            position:relative; 
+            top: 10px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size:1.2rem ;
+            display: inline-block;
+            margin: 1px auto 20px;
+            border-radius: 10%;
+        }
+
+        body a:hover {
+            background-color: blueviolet;
+            color: gold;
+        }
+
         body h1 {
             margin-top:50px;
             color: pink;
@@ -64,6 +85,9 @@
     </style>
 </head>
 <body>
+    <a href="index.html">
+        MENU
+    </a>
     <div class="div-nowrap">
         <h1>default: row nowrap</h1>
         <div class="flex-container default">
@@ -120,11 +144,6 @@
         <div class="item">4</div>
         <div class="item">5</div>
     </div>
-
-    <a href="index.html" 
-    style="padding:5px; background-color: blueviolet; color: white; text-align: center; position:relative; top: 10px; text-decoration: none; font-weight: bold; font-size:1.2rem ;">
-        Index
-    </a>
     
 </body>
 </html>
