@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos - display flex</title>
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body{
             padding-top: 10px;
             background-color: #202020;
             color: pink;
+        }
+
+        body > nav {
+            min-width: 300px;
+            max-width: 900px;
+            display: block;
+            margin: 0 auto;
         }
 
         body a {
@@ -29,29 +41,131 @@
         }
 
         .flex{
-            max-width: 300px;
+            margin: 0 auto;
+            max-width: 900px;
             padding: 10px;
-            border: 2px solid white;
-            border-radius: 10px;
             display: flex;
+            background-color: rgba(255, 182, 193, 0.12);
         }
 
         .item {
-            background-color: rgb(255, 0, 217);
+            border: 1px solid blueviolet;
             margin: 5px;
-            padding:2px
+            padding: 5px 10px
+        }
+
+        .item p {
+            text-align: justify;
+        }
+
+        .item code {
+            color:springgreen ;
+        }
+
+        .item div {
+            background-color: blueviolet;
+        }
+
+        .item > div > div{
+            border: 1px solid lightpink;
+            margin: 5px auto;
         }
 
     </style>
 </head>
 <body>
-    <a href="index.html">
-        MENU
-    </a>
-    <div class="flex">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-    </div>
+    <nav>
+        <a href="index.html">
+            MENU
+        </a>
+    </nav>
+
+    <section class="flex">
+        
+        <div class="item">
+            
+            <h1>Usando Display: flex</h1>
+            <p>
+                Este documento HTML há uma única <em>&lt;section&gt;</em> de classe flex que possui a propriedade <strong>display</strong> com valor <strong>flex</strong> que alinhará seus itens em linha, mesmo que por padrão seu compartamento seja a de ocupar todo espaço na horizontal, também conhecidos como item de display block.
+            </p>
+
+            <p>
+                Dentro desta <em> &lt;section&gt;</em> há três divs que ficam uma ao lado da outra por conta da propriedade css display da &lt;section class="flex"&gt;. Abaixo o código CSS da classe <em>flex</em> .
+            </p>
+
+            <code>
+<pre>
+.flex {
+    margin: 0 auto;
+    max-width: 900px; 
+    padding: 10px; 
+    display: flex; 
+    background-color: rgba(255, 182, 193, 0.12); 
+}
+</pre>
+            </code>
+
+        </div>
+
+        <div class="item">
+
+            <h2> Segunda div </h2>
+            <p>
+                Este parágrafo pertence a segunda div que está dentro da section citada anteriormente.
+                As divs possuem a classe <strong>item</strong> e possui as seguintes propriedades CSS
+            </p>
+
+            <code>
+<pre>
+.item {
+    border: 1px solid blueviolet;
+    margin: 5px;
+    padding: 5px 10px;
+}
+</pre>                
+            </code>
+
+            <p>
+                Os conteúdos das tags <em>&lt;p&gt;</em> das divs classe item possuem alinhamento justificado. 
+            </p>
+
+            <code>
+<pre>
+.item p { 
+    text-align: justify;
+}
+</pre>
+            </code>
+        </div>
+        
+        <div class="item">
+            <h1>Terceira div</h1>
+           
+            <p>
+                Aqui mais uma div para exemplificar com três divs. Abaixo uma div com display default (block) com outras divs dentro.
+            </p>
+
+            <div>
+                <h3>Aqui uma div com display: block</h3>
+                <p>
+                    Esta div tem display default, block.
+                    abaixo três divs e seu comportamento padrão.
+                </p>
+
+                <div>
+                    div 1
+                </div>
+
+                <div>
+                    div 2
+                </div>
+
+                <div>
+                    div 3
+                </div>
+            </div>
+           
+        </div>
+    </section>
 </body>
 </html>
