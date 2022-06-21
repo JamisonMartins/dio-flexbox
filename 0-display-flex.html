@@ -43,15 +43,18 @@
         .flex{
             margin: 0 auto;
             max-width: 900px;
+            min-width: 340px;
             padding: 10px;
             display: flex;
-            background-color: rgba(255, 182, 193, 0.12);
+            background-color: 
+            rgba(255, 182, 193, 0.12);
         }
 
         .item {
+            min-width: 110px;
             border: 1px solid blueviolet;
             margin: 5px;
-            padding: 5px 10px
+            padding: 5px 10px 10px;
         }
 
         .item p {
@@ -64,13 +67,21 @@
 
         .item div {
             background-color: blueviolet;
+            padding: 5px;
         }
 
         .item > div > div{
             border: 1px solid lightpink;
-            margin: 5px auto;
+            margin: 5px auto; 
         }
 
+        @media only screen and (max-width: 600px) {
+            .flex {
+                flex-wrap: wrap;
+                justify-content: center;
+                min-width:320px ;
+            }   
+        }
     </style>
 </head>
 <body>
@@ -86,7 +97,7 @@
             
             <h1>Usando Display: flex</h1>
             <p>
-                Este documento HTML há uma única <em>&lt;section&gt;</em> de classe flex que possui a propriedade <strong>display</strong> com valor <strong>flex</strong> que alinhará seus itens em linha, mesmo que por padrão seu compartamento seja a de ocupar todo espaço na horizontal, também conhecidos como item de display block.
+                Este documento HTML há uma única <em>&lt;section&gt;</em> de classe flex que possui a propriedade <strong>display</strong> com valor <strong>flex</strong> que alinhará seus itens em linha quando o a tela do dispotivo ter pelo menos 500 pixels de largura, mesmo que por padrão seu compartamento seja a de ocupar todo espaço na horizontal, também conhecidos como item com display block.
             </p>
 
             <p>
@@ -94,15 +105,15 @@
             </p>
 
             <code>
-<pre>
-.flex {
-    margin: 0 auto;
-    max-width: 900px; 
-    padding: 10px; 
-    display: flex; 
-    background-color: rgba(255, 182, 193, 0.12); 
-}
-</pre>
+
+                .flex { <br>
+                    &nbsp;&nbsp;    margin: 0 auto; <br>
+                    &nbsp;&nbsp;    max-width: 900px; <br>
+                    &nbsp;&nbsp;    padding: 10px; <br>
+                    &nbsp;&nbsp;    display: flex; <br>
+                    &nbsp;&nbsp;    background-color: rgba(255, 182, 193, 0.12); <br>
+                } 
+
             </code>
 
         </div>
@@ -116,13 +127,11 @@
             </p>
 
             <code>
-<pre>
-.item {
-    border: 1px solid blueviolet;
-    margin: 5px;
-    padding: 5px 10px;
-}
-</pre>                
+                .item {
+                    &nbsp;&nbsp;    border: 1px solid blueviolet; <br>
+                    &nbsp;&nbsp;    margin: 5px; <br>
+                    &nbsp;&nbsp;    padding: 5px 10px; <br>
+                }             
             </code>
 
             <p>
@@ -130,11 +139,11 @@
             </p>
 
             <code>
-<pre>
-.item p { 
-    text-align: justify;
-}
-</pre>
+
+                .item p { 
+                    &nbsp;&nbsp;    text-align: justify;
+                }
+
             </code>
         </div>
         
