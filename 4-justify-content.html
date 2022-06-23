@@ -7,8 +7,16 @@
     <title>Fundamentos - justify-content</title>
     <style>
         body {
+            
             background-color: #202020;
             color: lightpink;
+        }
+
+        body .bloco {
+            display: flex;
+            align-items: flex-start;
+            align-content: center;
+            justify-content: space-evenly;
         }
 
         a {
@@ -20,7 +28,6 @@
             font-weight: bold; 
             font-size:1.2rem; 
             display: block; 
-            position:relative; 
             width: 60px; 
             margin: 40px auto; 
             border-radius: 10%;
@@ -30,13 +37,14 @@
             color: gold;
         }
 
-        h2 {
+        h1,h2 {
             text-align: center;
             text-transform: uppercase;
             font-size: medium;
         }
 
         .container{
+            min-height: 200px;
             max-width: 400px;
             border: 2px solid lightpink;
             margin: 10px auto 50px;
@@ -48,6 +56,12 @@
             margin: 5px;
             text-align: center;
             color: white;
+        }
+
+        .column{
+            flex-direction: column;
+            min-height: 200px;
+            max-height: 300px;
         }
 
         .flex-start{
@@ -82,50 +96,108 @@
         MENU
     </a>
 
-    <h2>justify-content: flex-start (default)</h2>
-    <section class="container flex-start">
-        <div class="item">01</div>
-        <div class="item"> 02</div>
-        <div class="item">03</div>
-    </section>
+    <div class="bloco">
     
-    <h2>justify-content: flex-end</h2>
-    <section class="container flex-end">
-        <div class="item">01</div>
-        <div class="item"> 02</div>
-        <div class="item">03</div>
-    </section>
-
-    <h2>justify-content: center</h2>
-    <section class="container center">
-        <div class="item">01</div>
-        <div class="item"> 02</div>
-        <div class="item">03</div>
-        <div class="item">04</div>
-        <div class="item">05</div>
-    </section>
-
-    <!-- Adiciona espaço entre os itens filhos "empurrando" os das pontas aos ertremos do container -->
-    <h2>justify-content: space-between </h2>
-    <section class="container space-between">
-        <div class="item">01</div>
-        <div class="item"> 02</div>
-        <div class="item">03</div>
-    </section>
-
-    <h2>justify-content: space-around</h2>
-    <section class="container space-around">
-        <div class="item">01</div>
-        <div class="item"> 02</div>
-        <div class="item">03</div>
-    </section>
-
-    <h2>justify-content: space-evenly</h2>
-    <section class="container space-evenly">
-        <div class="item">01</div>
-        <div class="item"> 02</div>
-        <div class="item">03</div>
-    </section>
-
+        <section id="row">
+            
+            <h1>flexdirection:  row (default)</h1>
+            <h2>justify-content: flex-start (default)</h2>
+            <section class="container flex-start">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+            
+            <h2>justify-content: flex-end</h2>
+            <section class="container flex-end">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+    
+            <h2>justify-content: center</h2>
+            <section class="container center">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+                <div class="item">04</div>
+                <div class="item">05</div>
+            </section>
+    
+            <!-- Adiciona espaço entre os itens filhos "empurrando" os das pontas aos ertremos do container -->
+            <h2>justify-content: space-between </h2>
+            <section class="container space-between">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+    
+            <h2>justify-content: space-around</h2>
+            <section class="container space-around">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+    
+            <h2>justify-content: space-evenly</h2>
+            <section class="container space-evenly">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+        </section>
+    
+        <section id="column">
+            <h1>flexdirection: column</h1>
+            <h2>justify-content: flex-start (default)</h2>
+            <section class="container column flex-start ">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+                <div class="item">04</div>
+                <div class="item">05</div>
+            </section>
+    
+            <h2>justify-content: flex-end</h2>
+            <section class="container column flex-end">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+                <div class="item">04</div>
+                <div class="item">05</div>
+            </section>
+    
+            <h2>justify-content: center</h2>
+            <section class="container column center">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+                <div class="item">04</div>
+                <div class="item">05</div>
+            </section>
+    
+            <h2>justify-content: space-between </h2>
+            <section class="container column space-between">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+    
+            <h2>justify-content: space-around</h2>
+            <section class="container column space-around">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+    
+            <h2>justify-content: space-evenly</h2>
+            <section class="container column space-evenly">
+                <div class="item">01</div>
+                <div class="item"> 02</div>
+                <div class="item">03</div>
+            </section>
+        </section>
+        
+    </div>
 </body>
 </html>
