@@ -19,25 +19,44 @@
             color:lightpink;
         }
 
+        header{
+            max-width: 50%;
+        }
+
+        nav {
+            max-width: max-content;
+        }
+
         nav ul{
             padding: 0;
+            display: block;
         }
 
         nav a {
+            display: inline-block;
+            text-align: center;
             text-decoration: none;
             text-transform: uppercase;
-            color: blueviolet;
+            background-color: blueviolet;
+            color: lightpink;
+            padding: 0.5rem;
+            min-width: 15rem;
+            font-weight: 100;
         }
 
         nav a:hover {
-            color: lightpink;
+            color: gold;
+            background-color: rgba(137, 43, 226, 0.5);
+            font-weight: bolder;
         }
 
         nav li {
             list-style-type: none;
             padding: 0.25rem 0;
-            font-weight: bold;
+            
         }
+
+        
 
     </style> 
 
@@ -49,6 +68,7 @@
 
     <h1>Estudando CSS - DISPLAY FLEX</h1>
 
+    <header>
     <nav>
         
         <ul>
@@ -76,9 +96,13 @@
                 <a href="5-align-items.html">align-items</a>
             </li>
 
+            <li>
+                <a href="6-align-content.html">align-content</a>
+            </li>
+
         </ul>
         
-
     </nav>
+    </header>
 </body>
 </html>

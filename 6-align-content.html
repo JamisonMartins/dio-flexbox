@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align-content</title>
+</head>
+
+<style>
+
+/* Reset CSS */
+* {
+    padding: 0;
+    margin:0;
+}
+
+/* Header e seus itens */
+header {
+    margin: 0.5rem auto;
+    max-width: 900px;
+}
+
+header > h1 {
+    text-shadow: 0 0 15px;
+    text-align: center;
+}
+
+header > p {
+    text-align: center;
+    margin: 0.5rem;
+    margin: 1rem  0.5rem;
+}
+
+/* Lista de âncoras para os blocos */
+.indice ul {
+    list-style-type: none;
+    max-width: 900px;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+.indice li {
+    display: inline;
+}
+
+.indice a {
+    text-align: center;
+    width: 15rem;
+    display: inline-block;
+    padding: 0.3rem;
+    background-color: blueviolet;
+    margin-top: 0.5rem;
+    color: lightpink;
+    text-decoration: none;
+}
+
+.indice a:hover{
+    color: gold;
+    font-weight: bolder;
+    background-color: rgba(137, 43, 226, 0.500);
+}
+
+.indice a:active {
+    color: blueviolet;
+}
+
+
+/* Link fixo para voltar ao topo */
+.btn-indice {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background-color: lightpink;
+    color: blueviolet;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius:50%;
+}
+
+.btn-indice:hover {
+    background-color: khaki;
+    color: blueviolet;
+}
+
+body {
+    background-color: #202020;
+    color: lightpink;
+    margin: 2rem 0.3rem;
+}
+
+/* parte do conteúdo com todas as sections de classe container */
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+
+/* Título que antecede a section container */
+div > h2 {
+    margin: 2rem auto 0;
+    text-align: center;
+    text-decoration: underline double blueviolet;
+    font-size: 1.5rem;
+}
+
+
+/* Sections (Blocos) de borda tracejada com 7 itens */
+.container {
+    height: 600px;
+    max-width: 300px;
+    margin: 1rem auto ;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed ;
+    
+}
+
+
+/* Itens da section container */
+.item {
+    background-color: blueviolet;
+    color: lightpink;
+    margin: 0.2rem;
+    padding: 0 0.5rem;
+    flex: 1;
+    text-align: center;
+}
+
+.item h1 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #202020;
+}
+
+.item p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 0.3rem auto;
+    
+}
+
+.stretch {
+    align-content: stretch;
+}
+
+.center {
+    align-content: center;
+}
+
+.start {
+    align-content: flex-start;
+}
+
+.end {
+    align-content: flex-end;
+}
+
+.around{
+    align-content: space-around;
+}
+
+.between {
+    align-content: space-between;
+}
+
+.evenly {
+    align-content: space-evenly;
+}
+
+
+</style>
+
+<body>
+    
+    <a href="#indice" class="btn-indice"> &nbsp;↑&nbsp; </a>
+
+    <header>
+        <h1>ALIGN-CONTENT</h1>
+        <p>
+            Arquivo HTML contendo section de classe container e seus items formatados com a propriedade CSS <em>align-content</em>.
+        </p>
+
+        <nav class="indice" id="indice">
+            <ul>
+                <li>
+                    <a href="#stretch">stretch (default/padrão)</a>
+                </li>
+
+                <li>
+                    <a href="#center">center</a>
+                </li>
+
+                <li>
+                    <a href="#start">flex-start</a>
+                </li>
+
+                <li>
+                    <a href="#end">flex-end</a>
+                </li>
+
+                <li>
+                    <a href="#around">space-around</a>
+                </li>
+
+                <li>
+                    <a href="#between">space-between</a>
+                </li>
+
+                <li>
+                    <a href="#evenly">space-evenly</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div id="stretch">
+            <h2>align-content: stretch</h2>
+            <p></p>
+            <section class="container stretch">
+        
+                <div class="item">
+                    <h1>titulo 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.  
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 2</h1>
+                    <p>Sequi maxime doloremque incidunt unde neque eum consequuntur, quia quisquam ad?  </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 3</h1>
+                    <p>Repellendus maiores atque eligendi fugiat excepturi! Dolorem cumque ad harum. Possimus. </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 4</h1>
+                    <p>
+                        Corporis impedit quasi laboriosam, tempore cumque animi!
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 5</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 6</h1>
+                    <p>
+                        Eligendi nemo eos vel illum deserunt doloremque hic 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 7</h1>
+                    <p>
+                        doloribus minima ipsa nostrum saepe temporibus repudiandae 
+                    </p>
+                </div>
+           
+            </section>
+        </div>
+    
+        <div id="center">
+            <h2>align-content: center</h2>
+            <p></p>
+            <section class="container center">
+        
+                <div class="item">
+                    <h1>titulo 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.  
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 2</h1>
+                    <p>Sequi maxime doloremque incidunt unde neque eum consequuntur, quia quisquam ad?  </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 3</h1>
+                    <p>Repellendus maiores atque eligendi fugiat excepturi! Dolorem cumque ad harum. Possimus. </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 4</h1>
+                    <p>
+                        Corporis impedit quasi laboriosam, tempore cumque animi!
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 5</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 6</h1>
+                    <p>
+                        Eligendi nemo eos vel illum deserunt doloremque hic 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 7</h1>
+                    <p>
+                        doloribus minima ipsa nostrum saepe temporibus repudiandae 
+                    </p>
+                </div>
+           
+            </section>
+        </div>
+
+        <div id="start">
+            <h2>align-content: flex-start</h2>
+            <p></p>
+            <section class="container start">
+        
+                <div class="item">
+                    <h1>titulo 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.  
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 2</h1>
+                    <p>Sequi maxime doloremque incidunt unde neque eum consequuntur, quia quisquam ad?  </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 3</h1>
+                    <p>Repellendus maiores atque eligendi fugiat excepturi! Dolorem cumque ad harum. Possimus. </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 4</h1>
+                    <p>
+                        Corporis impedit quasi laboriosam, tempore cumque animi!
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 5</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 6</h1>
+                    <p>
+                        Eligendi nemo eos vel illum deserunt doloremque hic 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 7</h1>
+                    <p>
+                        doloribus minima ipsa nostrum saepe temporibus repudiandae 
+                    </p>
+                </div>
+           
+            </section>
+        </div>
+
+        <div id="end">
+            <h2>align-content: flex-end</h2>
+            <p></p>
+            <section class="container end">
+        
+                <div class="item">
+                    <h1>titulo 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.  
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 2</h1>
+                    <p>Sequi maxime doloremque incidunt unde neque eum consequuntur, quia quisquam ad?  </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 3</h1>
+                    <p>Repellendus maiores atque eligendi fugiat excepturi! Dolorem cumque ad harum. Possimus. </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 4</h1>
+                    <p>
+                        Corporis impedit quasi laboriosam, tempore cumque animi!
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 5</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 6</h1>
+                    <p>
+                        Eligendi nemo eos vel illum deserunt doloremque hic 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 7</h1>
+                    <p>
+                        doloribus minima ipsa nostrum saepe temporibus repudiandae 
+                    </p>
+                </div>
+           
+            </section>
+        </div>
+
+        <div id="around">
+            <h2>align-content: space-around</h2>
+            <p></p>
+            <section class="container around">
+        
+                <div class="item">
+                    <h1>titulo 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.  
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 2</h1>
+                    <p>Sequi maxime doloremque incidunt unde neque eum consequuntur, quia quisquam ad?  </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 3</h1>
+                    <p>Repellendus maiores atque eligendi fugiat excepturi! Dolorem cumque ad harum. Possimus. </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 4</h1>
+                    <p>
+                        Corporis impedit quasi laboriosam, tempore cumque animi!
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 5</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 6</h1>
+                    <p>
+                        Eligendi nemo eos vel illum deserunt doloremque hic 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 7</h1>
+                    <p>
+                        doloribus minima ipsa nostrum saepe temporibus repudiandae 
+                    </p>
+                </div>
+           
+            </section>
+        </div>
+
+        <div id="between">
+            <h2>align-content: space-between</h2>
+            <p></p>
+            <section class="container between">
+        
+                <div class="item">
+                    <h1>titulo 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.  
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 2</h1>
+                    <p>Sequi maxime doloremque incidunt unde neque eum consequuntur, quia quisquam ad?  </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 3</h1>
+                    <p>Repellendus maiores atque eligendi fugiat excepturi! Dolorem cumque ad harum. Possimus. </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 4</h1>
+                    <p>
+                        Corporis impedit quasi laboriosam, tempore cumque animi!
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 5</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 6</h1>
+                    <p>
+                        Eligendi nemo eos vel illum deserunt doloremque hic 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 7</h1>
+                    <p>
+                        doloribus minima ipsa nostrum saepe temporibus repudiandae 
+                    </p>
+                </div>
+           
+            </section>
+        </div>
+
+        <div id="evenly">
+            <h2>align-content: space-evenly</h2>
+            <p></p>
+            <section class="container evenly">
+        
+                <div class="item">
+                    <h1>titulo 1</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.  
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 2</h1>
+                    <p>Sequi maxime doloremque incidunt unde neque eum consequuntur, quia quisquam ad?  </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 3</h1>
+                    <p>Repellendus maiores atque eligendi fugiat excepturi! Dolorem cumque ad harum. Possimus. </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 4</h1>
+                    <p>
+                        Corporis impedit quasi laboriosam, tempore cumque animi!
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 5</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 6</h1>
+                    <p>
+                        Eligendi nemo eos vel illum deserunt doloremque hic 
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <h1>titulo 7</h1>
+                    <p>
+                        doloribus minima ipsa nostrum saepe temporibus repudiandae 
+                    </p>
+                </div>
+           
+            </section>
+        </div>
+        
+    </main>
+
+</body>
+</html>
