@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Fundamentos - align-items  </title>
+
+    <style> 
+        * {
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+            text-decoration: none;
+        }
+
+        body{
+            background-color: #202020;
+            color: lightpink;
+            margin:0 5% 2rem;
+        }
+
+        a {
+            padding:5px; 
+            background-color: blueviolet; 
+            color: lightpink; 
+            text-align: center;  
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size:1.2rem; 
+            display: block; 
+            width: max-content; 
+            margin: 40px auto; 
+            border-radius: 10%;
+        }
+
+        a:hover {
+            color: gold;
+        }
+
+        main {
+            margin: 0 auto;
+            max-width: 900px;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: stretch;
+        }
+
+        @media only screen and (max-width: 768px) {
+            main{
+                display: block;
+            }
+
+            .column {
+                margin-top: 1rem;
+            }
+        }
+
+        .row, .column {
+            padding: 0 0.5rem;
+            border:4px double rgb(88, 88, 88) ;
+        }
+
+        h1,h2,h3 {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        h1 {
+            text-shadow: 0 0 15px pink;
+            text-transform: uppercase;
+            
+        }
+
+        h2 {
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: blueviolet;
+            margin-bottom: 0;
+        }
+
+        .container {
+            margin: 0.75rem auto;
+            max-width: 350px;
+            min-width:150px;
+            border: 1px solid blueviolet;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex {
+            flex: 1;
+        }
+
+        .item {
+            margin: 5px;
+            padding: 5px;
+            background-color: lightpink ;
+            color: blueviolet ;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .flex-start {
+            align-items: flex-start;
+        }
+
+        .flex-end {
+            align-items: flex-end;
+        }
+
+        .baseline {
+            align-items: baseline;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                MENU
+            </a>
+        </nav>
+        <h1>align-items</h1>
+    </header>
+    
+    <main>
+    
+        <div class="row">
+            <h1>flex-direction: row</h1>
+            <h2>center</h2>
+            <section class="container center">
+                
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>stretch</h2>
+            <section class="container stretch">
+                
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>flex-start</h2>
+            <section class="container flex-start">
+      
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>flex-end</h2>
+            <section class="container flex-end">
+                  
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>baseline</h2>
+            <section class="container baseline">
+            
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div> 
+                
+                <div class="item"><br><br> Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+            
+            </section>
+    
+        </div>
+
+        <div class="column">
+            <h1>flex-direction: column</h1>
+
+            <h2>center</h2>
+            <section class="container center column">
+                
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>stretch</h2>
+            <section class="container stretch column">
+                
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>flex-start</h2>
+            <section class="container flex-start column">
+      
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>flex-end</h2>
+            <section class="container flex-end column">
+                  
+                <div class="item">Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+                
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div>
+    
+            </section>
+    
+            <h2>baseline</h2>
+            <section class="container baseline column">
+            
+                <div class="item">
+                    Cumque deserunt sapiente excepturi, hic ab?  
+                </div> 
+                
+                <div class="item"><br><br> Lorem ipsum </div>
+                
+                <div class="item">
+                    dolor sit amet consectetur adipisicing elit. 
+                </div>
+            
+            </section>
+    
+        </div>
+
+    </main>
+
+</body>
+</html>
