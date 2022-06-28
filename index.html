@@ -11,25 +11,33 @@
 
         body {
             background-color: rgb(30, 30, 30);
-            min-width: 300px;
-            padding: 40px 25%;    
+            min-width: 250px;
+            padding: 40px;    
         }
 
         h1 {
             color:lightpink;
-        }
-
-        header{
-            max-width: 50%;
-        }
+            text-align: center;
+        }    
 
         nav {
-            max-width: max-content;
+            margin: 0 auto;
+           max-width: 768px;
         }
 
         nav ul{
             padding: 0;
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            display: inline-block;
+            list-style-type: none;
+            flex-grow: 1;
+            flex-basis: 160px;
+            flex-shrink: 1;
+            margin:0.3rem;
         }
 
         nav a {
@@ -39,8 +47,8 @@
             text-transform: uppercase;
             background-color: blueviolet;
             color: lightpink;
-            padding: 0.5rem;
-            min-width: 15rem;
+            padding:0.3rem;
+            width: 100%;
             font-weight: 100;
         }
 
@@ -50,13 +58,6 @@
             font-weight: bolder;
         }
 
-        nav li {
-            list-style-type: none;
-            padding: 0.25rem 0;
-            
-        }
-
-        
 
     </style> 
 
@@ -66,9 +67,10 @@
 
 <body>
 
-    <h1>Estudando CSS - DISPLAY FLEX</h1>
+    
 
     <header>
+        <h1>Estudando CSS <br> DISPLAY FLEX</h1>
     <nav>
         
         <ul>
